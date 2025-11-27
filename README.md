@@ -522,7 +522,7 @@ Esta seção resume as diferenças entre links simbólicos e links físicos (har
    * Variáveis e expansões não são interpretadas.
    * Exemplo: `echo '$USER'` imprime a sequência literal `$USER`.
 
-2. **Aspas duplas (`" ")**
+2. **Aspas duplas (`" "`)**
    * Protegem espaços e a maior parte dos caracteres especiais.
    * Permitem expansão de variáveis e comandos.
    * Exemplo: `echo "$USER"` imprime o nome do usuário atual.
