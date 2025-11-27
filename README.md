@@ -1,4 +1,4 @@
-<div align="center">
+<div align="center" id="top">
 
 # Linux: Guia de Referência para LPI Essentials/LPIC-1
 
@@ -1337,6 +1337,6 @@ cat /etc/resolv.conf
 
 <div align="center">
 
-**[⬆ Voltar ao topo](#linux-guia-de-referência-rápida)**
+**[⬆ Voltar ao topo](#top)**
 
 </div>
