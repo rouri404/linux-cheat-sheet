@@ -85,37 +85,30 @@ comando --help               # Ajuda rápida
   - [1.1 Software Livre vs. Código Aberto](#11-software-livre-vs-código-aberto)
   - [1.2 Arquitetura do Sistema GNU/Linux](#12-arquitetura-do-sistema-gnulinux)
 
-### Seção 2: Estrutura do Sistema
-- [2. Gerenciamento de Arquivos](#2-gerenciamento-de-arquivos)
-  - [2.1 Sistema de Arquivos e Estrutura de Diretórios](#21-sistema-de-arquivos-e-estrutura-de-diretórios)
-  - [2.2 Links: Hard vs. Symbolic](#22-links-hard-vs-symbolic)
-  - [2.3 Permissões e Propriedade](#23-permissões-e-propriedade)
+### Seção 2: Arquitetura e Estrutura do Sistema
+- [2. Arquitetura do Sistema](#2-arquitetura-do-sistema)
+  - [2.1 Níveis de Privilégio (Protection Rings)](#21-níveis-de-privilégio-protection-rings)
+  - [2.2 Comunicação entre Espaços: System Calls](#22-comunicação-entre-espaços-system-calls)
+  - [2.3 Hierarquia de Software](#23-hierarquia-de-software)
+- [3. Gerenciamento de Exibição Gráfica](#3-gerenciamento-de-exibição-gráfica)
+  - [3.1 X Window System (X11/Xorg)](#31-x-window-system-x11xorg)
+  - [3.2 Wayland](#32-wayland)
+- [4. Licenças de Software Livre e de Código Aberto](#4-licenças-de-software-livre-e-de-código-aberto)
 
-### Seção 3: Linha de Comando
-- [3. Comandos Essenciais](#3-comandos-essenciais)
-  - [3.1 Navegação e Manipulação de Arquivos](#31-navegação-e-manipulação-de-arquivos)
-  - [3.2 Processamento de Texto](#32-processamento-de-texto)
-  - [3.3 Gerenciamento de Processos](#33-gerenciamento-de-processos)
+### Seção 3: Linha de Comando e Ferramentas
+- [5. Cheat Sheet: Comandos Essenciais (LPI Essentials)](#5-cheat-sheet-comandos-essenciais-lpi-essentials)
+- [6. Regex vs. Globbing](#6-regex-vs-globbing)
+- [7. Links: Hard vs. Symbolic (Soft)](#7-links-hard-vs-symbolic-soft)
+- [8. Scripting e Aspas no Shell](#8-scripting-e-aspas-no-shell)
 
-### Seção 4: Ferramentas Avançadas
-- [4. Expressões Regulares e Globbing](#4-expressões-regulares-e-globbing)
-- [5. Scripts e Automação](#5-scripts-e-automação)
-  - [5.1 Tipos de Aspas e Expansão](#51-tipos-de-aspas-e-expansão)
-  - [5.2 Códigos de Saída e Controle de Fluxo](#52-códigos-de-saída-e-controle-de-fluxo)
-
-### Seção 5: Administração do Sistema
-- [6. Gerenciamento de Pacotes](#6-gerenciamento-de-pacotes)
-- [7. Gerenciamento de Usuários e Grupos](#7-gerenciamento-de-usuários-e-grupos)
-- [8. Gerenciamento de Dispositivos](#8-gerenciamento-de-dispositivos)
-
-### Seção 6: Tópicos Avançados
-- [9. Virtualização e Contêineres](#9-virtualização-e-contêineres)
-- [10. Conceitos de Nuvem](#10-conceitos-de-nuvem)
+### Seção 4: Tópicos de Sistema e Rede
+- [9. Hardware e o Diretório /proc](#9-hardware-e-o-diretório-proc)
+- [10. Conceitos de Cloud e Virtualização](#10-conceitos-de-cloud-e-virtualização)
   - [10.1 Modelos de Serviço em Nuvem](#101-modelos-de-serviço-em-nuvem)
   - [10.2 Conceitos de Escalabilidade e Elasticidade](#102-conceitos-de-escalabilidade-e-elasticidade)
   - [10.3 Laboratórios de Estudo com Linux (VMs e Containers)](#103-laboratórios-de-estudo-com-linux-vms-e-containers)
 
-### Seção 7: Tópicos Avançados
+### Seção 5: Administração do Sistema
 - [11. Gestão de Processos](#11-gestão-de-processos)
 - [12. Redes Básicas](#12-redes-básicas)
 - [13. Variáveis de Ambiente e o $PATH](#13-variáveis-de-ambiente-e-o-path)
@@ -123,7 +116,7 @@ comando --help               # Ajuda rápida
 - [15. Gestão de Contas](#15-gestão-de-contas)
 - [16. O Poder do Sudo](#16-o-poder-do-sudo)
 
-### Seção 8: Preparação para Certificação e Apêndices
+### Seção 6: Preparação para Certificação e Apêndices
 - [17. Estratégias para a Prova LPI](#17-estratégias-para-a-prova-lpi)
 - [18. Curiosidades e História do Linux](#18-curiosidades-e-história-do-linux)
 - [19. Resumo Completo: Tudo o que Você Precisa Saber](#19-resumo-completo-tudo-o-que-você-precisa-saber)
