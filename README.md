@@ -113,6 +113,7 @@ comando --help               # Ajuda rápida
 - [10. Conceitos de Nuvem](#10-conceitos-de-nuvem)
   - [10.1 Modelos de Serviço em Nuvem](#101-modelos-de-serviço-em-nuvem)
   - [10.2 Conceitos de Escalabilidade e Elasticidade](#102-conceitos-de-escalabilidade-e-elasticidade)
+  - [10.3 Laboratórios de Estudo com Linux (VMs e Containers)](#103-laboratórios-de-estudo-com-linux-vms-e-containers)
 
 ### Seção 7: Tópicos Avançados
 - [11. Gestão de Processos](#11-gestão-de-processos)
@@ -606,6 +607,60 @@ A prova Essentials inclui conceitos modernos de computação em nuvem e virtuali
 
 ### Conceito de Elasticidade
 A elasticidade refere-se à capacidade de ajustar automaticamente recursos (aumentar ou reduzir) de acordo com a demanda, evitando superprovisionamento de infraestrutura.
+
+### 10.3 Laboratórios de Estudo com Linux (VMs e Containers)
+
+Para fins de estudo e preparação para certificações, é recomendável utilizar ambientes isolados onde seja possível experimentar sem risco para o sistema principal.
+
+#### Virtualizando Linux com Máquinas Virtuais
+
+**Quando utilizar máquinas virtuais**
+- Criar ambientes de teste isolados para instalação de distribuições.
+- Experimentar particionamento de disco, bootloader e diferentes layouts de sistema de arquivos.
+- Simular múltiplos servidores em um único host físico.
+
+**Ferramentas comuns**
+- **VirtualBox**: solução multiplataforma, adequada para uso em desktops.
+- **KVM/QEMU**: solução de virtualização baseada em kernel, com bom desempenho em hosts Linux.
+- **VMware Workstation/Player**: alternativas amplamente utilizadas em alguns ambientes corporativos.
+
+**Boas práticas para laboratório**
+- Criar *snapshots* antes de alterações significativas.
+- Manter VMs separadas por função (ex.: servidor web, servidor de banco de dados, desktop de testes).
+- Organizar um repositório de ISOs das distribuições utilizadas no estudo.
+
+#### Estudando Linux com Containers
+
+**Quando utilizar containers**
+- Focar em serviços e aplicações, não na instalação completa do sistema.
+- Subir rapidamente serviços de teste (ex.: servidor web, banco de dados, cache).
+- Reproduzir cenários de produção de forma leve e descartável.
+
+**Ferramentas comuns**
+- **Docker**: plataforma de containers mais difundida para desenvolvimento e testes.
+- **Podman**: alternativa compatível com Docker, orientada a execução *rootless*.
+- **Docker Compose**: ferramenta para orquestrar múltiplos serviços em ambiente de desenvolvimento.
+
+**Exemplos de uso para estudo**
+```bash
+# Subir rapidamente um contêiner Ubuntu para testar comandos
+docker run -it --rm ubuntu:latest bash
+
+# Subir um servidor web nginx em ambiente de teste
+docker run -d --name nginx-teste -p 8080:80 nginx
+```
+
+#### VM ou Container: qual utilizar?
+
+- **Prefira máquinas virtuais quando**:
+  - For necessário estudar instalação completa da distribuição.
+  - Houver interesse em particionamento, boot, init e serviços desde o início.
+  - For importante isolar totalmente o sistema convidado.
+
+- **Prefira containers quando**:
+  - O foco estiver em serviços, aplicações e suas configurações.
+  - Houver necessidade de criar e destruir ambientes com rapidez.
+  - For desejável aproximar o ambiente de desenvolvimento do ambiente de produção.
 
 ---
 
